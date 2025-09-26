@@ -72,7 +72,7 @@
     // Auto-update year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // PDF download: header + main + footer, fix header clipping
+    // PDF download: header + main + footer with top space fix
     document.getElementById("downloadPDF").addEventListener("click", () => {
       const header = document.querySelector("header");
       const main = document.querySelector("main");
@@ -82,13 +82,18 @@
       pdfContainer.style.margin = "0";
       pdfContainer.style.padding = "0";
 
+      // Add small spacer to prevent header clipping
+      const spacer = document.createElement("div");
+      spacer.style.height = "0.2in";
+      pdfContainer.appendChild(spacer);
+
       pdfContainer.appendChild(header.cloneNode(true));
       pdfContainer.appendChild(main.cloneNode(true));
       pdfContainer.appendChild(footer.cloneNode(true));
 
       html2pdf().from(pdfContainer).set({
-        margin: [0.5, 0.5, 0.5, 0.5], // top, left, bottom, right in inches
-        filename: "resume.pdf",
+        margin: [0.3, 0.5, 0.5, 0.5], // top, left, bottom, right in inches
+        filename: "Dirk Uys CV 2025.pdf",
         image: { type: "jpeg", quality: 0.98 },
         html2canvas: { scale: 2, logging: false, scrollY: -window.scrollY },
         jsPDF: { unit: "in", format: "a4", orientation: "portrait" }
