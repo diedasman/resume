@@ -2,7 +2,8 @@
 
 This repository hosts my minimalist single-page résumé, built with plain HTML and CSS and deployed via [GitHub Pages](https://pages.github.com/).
 
-👉 **View Live Résumé:** [https://diedasman.github.io/resume/](https://diedasman.github.io/resume/)
+🔗 **View Live Résumé:** [https://diedasman.github.io/resume/](https://diedasman.github.io/resume/)
+🔗 **Analytics:** [GoatCounter](https://dirkuys.goatcounter.com/)
 
 ---
 
