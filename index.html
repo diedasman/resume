@@ -3,20 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dirk Uys - CV</title>
-  <meta name="description" content="Online résumé of Dirk Uys, showcasing experience, skills, and projects.">
+  <title>Your Name – Resume</title>
+  <meta name="description" content="Online résumé of Your Name, showcasing experience, skills, and projects.">
 
-  <!-- Link to stylesheet -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Analytics (pick one) -->
+  <!-- Plausible -->
+  <!-- <script defer data-domain="yourusername.github.io" src="https://plausible.io/js/script.js"></script> -->
+
+  <!-- GoatCounter -->
+  <!-- <script data-goatcounter="https://yourname.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
 </head>
 <body>
   <header>
-    <h1>Dirk Uys</h1>
-    <p class="tagline">Mechatronic Engineer • Problem Solver • Builder</p>
+    <h1>Your Name</h1>
+    <p class="tagline">Software Engineer • Problem Solver • Builder</p>
     <div class="links">
-      <a href="mailto:uysdirkcornelis@gmail.com">Email</a> |
+      <a href="mailto:you@example.com">Email</a> |
       <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
       <a href="https://github.com/yourusername" target="_blank">GitHub</a>
     </div>
@@ -26,15 +34,9 @@
     <section>
       <h2>Experience</h2>
       <ul>
-        <li><strong>Junior Mechatronic Engineer</strong> – SmartGrid Technologies January 2024<br>
-          • 24 Months full-time employed at SmartGrid Technologies, Techno Park, Stellenbosch<br>
-          • Design and development of test jigs and production equipment<br>
-          • Performing regular maintenance on test equipment<br>
-          • Developing prototype weather monitoring devices<br>
-          • Quality assurance checks performed on outgoing shipments<br>
-          • CAD Design: Solar panel mounting hardware, PCB enclosure, 3D printed parts for test equipment<br>
-          • Developing Python applications and scripts; GUI and file handling<br>
-          • Provide training to colleagues on production processes and how to use the equipment<br>
+        <li><strong>Job Title</strong> – Company (2022–Present)<br>
+          • Achievement one<br>
+          • Achievement two
         </li>
         <li><strong>Previous Role</strong> – Other Company (2019–2022)<br>
           • Achievement one<br>
@@ -63,12 +65,30 @@
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Your Name — <a href="resume.pdf">Download PDF</a></p>
+    <button onclick="window.print()">📄 Download PDF</button>
+    <button id="toggle-theme" class="toggle-btn">🌙 Dark Mode</button>
+    <p>© <span id="year"></span> Your Name</p>
   </footer>
 
   <script>
-    // Auto-update footer year
+    // Auto-update year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Dark mode toggle
+    const btn = document.getElementById("toggle-theme");
+    const body = document.body;
+
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark");
+      btn.textContent = "☀️ Light Mode";
+    }
+
+    btn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      const isDark = body.classList.contains("dark");
+      btn.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
   </script>
 </body>
 </html>
