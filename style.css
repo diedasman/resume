@@ -6,6 +6,7 @@ body {
   background: #fff;
   color: #222;
   padding: 0 1rem;
+  transition: background 0.3s, color 0.3s;
 }
 
 header {
@@ -48,6 +49,67 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   color: #666;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   border-top: 1px solid #ddd;
+}
+
+button {
+  margin: 0.5rem;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #666;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #f0f0f0;
+}
+
+/* Dark mode */
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark h2 {
+  color: #66aaff;
+}
+
+body.dark a {
+  color: #66aaff;
+}
+
+body.dark footer {
+  border-color: #333;
+}
+
+body.dark button:hover {
+  background: #222;
+}
+
+/* Print styles for PDF */
+@media print {
+  button {
+    display: none;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+
+  footer {
+    border: none;
+    color: #000;
+  }
 }
