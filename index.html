@@ -61,41 +61,39 @@
     </section>
   </main>
 
-<footer>
-  <button id="downloadPDF">📄 Download PDF</button>
-  <p>© <span id="year"></span> Your Name</p>
-</footer>
+  <footer>
+    <button id="downloadPDF">📄 Download PDF</button>
+    <p>© <span id="year"></span> Your Name</p>
+  </footer>
 
-<!-- Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<script>
-  // Auto-update year
-  document.getElementById("year").textContent = new Date().getFullYear();
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    // Auto-update year
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  // PDF download: header + main + footer, no extra top space
-  document.getElementById("downloadPDF").addEventListener("click", () => {
-    const header = document.querySelector("header");
-    const main = document.querySelector("main");
-    const footer = document.querySelector("footer");
+    // PDF download: header + main + footer, fix header clipping
+    document.getElementById("downloadPDF").addEventListener("click", () => {
+      const header = document.querySelector("header");
+      const main = document.querySelector("main");
+      const footer = document.querySelector("footer");
 
-    // Temporary container for PDF
-    const pdfContainer = document.createElement("div");
-    pdfContainer.style.margin = "0";          // remove container margin
-    pdfContainer.style.padding = "20";         // remove container padding
+      const pdfContainer = document.createElement("div");
+      pdfContainer.style.margin = "0";
+      pdfContainer.style.padding = "0";
 
-    // Clone nodes
-    pdfContainer.appendChild(header.cloneNode(true));
-    pdfContainer.appendChild(main.cloneNode(true));
-    pdfContainer.appendChild(footer.cloneNode(true));
+      pdfContainer.appendChild(header.cloneNode(true));
+      pdfContainer.appendChild(main.cloneNode(true));
+      pdfContainer.appendChild(footer.cloneNode(true));
 
-    html2pdf().from(pdfContainer).set({
-      margin: 0.2,                            // small page margin
-      filename: "Dirk Uys CV 2025.pdf",
-      image: { type: "jpeg", quality: 0.98 },
-      html2canvas: { scale: 2, logging: false, scrollY: -window.scrollY },
-      jsPDF: { unit: "in", format: "a4", orientation: "portrait" }
-    }).save();
-  });
-</script>
+      html2pdf().from(pdfContainer).set({
+        margin: [0.5, 0.5, 0.5, 0.5], // top, left, bottom, right in inches
+        filename: "resume.pdf",
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 2, logging: false, scrollY: -window.scrollY },
+        jsPDF: { unit: "in", format: "a4", orientation: "portrait" }
+      }).save();
+    });
+  </script>
 </body>
 </html>
