@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name – Resume</title>
+  <meta name="description" content="Online résumé of Your Name, showcasing experience, skills, and projects.">
+
+  <!-- Link to stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Your Name</h1>
+    <p class="tagline">Software Engineer • Problem Solver • Builder</p>
+    <div class="links">
+      <a href="mailto:you@example.com">Email</a> |
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Job Title</strong> – Company (2022–Present)<br>
+          • Achievement one<br>
+          • Achievement two
+        </li>
+        <li><strong>Previous Role</strong> – Other Company (2019–2022)<br>
+          • Achievement one<br>
+          • Achievement two
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li><a href="https://github.com/yourusername/project1">Project 1</a> – Short description</li>
+        <li><a href="https://github.com/yourusername/project2">Project 2</a> – Short description</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <p>Python • JavaScript • HTML/CSS • Git • SQL</p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p>B.Sc. in Computer Science – University Name (2016–2019)</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Your Name — <a href="resume.pdf">Download PDF</a></p>
+  </footer>
+
+  <script>
+    // Auto-update footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
