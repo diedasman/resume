@@ -1,8 +1,8 @@
-# Online Résumé – Your Name
+# Online Résumé
 
 This repository hosts my minimalist single-page résumé, built with plain HTML and CSS and deployed via [GitHub Pages](https://pages.github.com/).
 
-👉 **View Live Résumé:** [https://yourusername.github.io/resume/](https://yourusername.github.io/resume/)
+👉 **View Live Résumé:** [https://yourusername.github.io/resume/](https://diedasman.github.io/resume/)
 
 ---
 
@@ -34,7 +34,7 @@ Settings:
 ---
 
 ## 📬 Contact
-- **Email:** you@example.com  
+- **Email:** uysdirkcornelis@gmail.com  
 - **LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)  
 - **GitHub:** [github.com/yourusername](https://github.com/yourusername)
 
