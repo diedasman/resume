@@ -36,7 +36,7 @@ I am eager to contribute my technical expertise and creativity to a dynamic engi
     * _10 Months worked part time_.
     * Technical drawings, design, and research in the development of a lightweight electric vehicle.
  
-* **KomTAG Plastics**
+* **KomTAG Plastics, Bredasdorp/Somerset-West**
     * _4 Weeks' vacation training._
     * Research and development of a solution towards waste management from injection moulding machines.
  
