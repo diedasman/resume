@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +14,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- GoatCounter Analytics -->
-  <script data-goatcounter="https://dirkuys.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+  <script data-goatcounter="https://dirkuys.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
+
 <body>
   <header>
-    <h1>Your Name</h1>
+    <h1>Dirk Uys</h1>
     <p class="tagline">Mechatronic Engineer • Problem Solver • Builder</p>
     <div class="links">
       <a href="mailto:uysdirkcornelis@gmail.com">Email</a> |
@@ -26,13 +27,26 @@
       <!-- <a href="https://github.com/yourusername" target="_blank">GitHub</a> -->
     </div>
   </header>
-
   <main>
     <section>
-      <h2>Skills</h2>
-      <p>• Programming • HTML/CSS • Git • SQL</p>
+      <h2>Objective</h2>
+      <p>Mechatronics engineering graduate with hands-on experience in electronics prototyping, CAD design, and software
+        development.
+        Skilled in programming (C/C++, Python, MATLAB, HTML), PCB design, and mechanical modelling,
+        with practical exposure to IoT systems, solar hardware, and electronic circuit testing.
+        Experienced in both individual problem-solving and collaborative project work,
+        with strong technical literacy and a commitment to continuous learning.
+        Seeking an engineering role where I can apply my technical expertise, creativity, and teamwork
+        to contribute to innovative solutions and high-quality projects.</p>
     </section>
-    
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>Programming: C/C++, Python, MATLAB, HTML</li>
+        <li>Tools: Git, Markdown, Terminal</li>
+        <li>CAD: FreeCAD, Autodesk Inventor, Maya, KiCAD</li>
+      </ul>
+    </section>
     <section>
       <h2>Experience</h2>
       <ul>
@@ -69,21 +83,14 @@
         </li>
       </ul>
     </section>
-
-    <!-- <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><a href="https://github.com/yourusername/project1">Project 1</a> – Short description</li>
-        <li><a href="https://github.com/yourusername/project2">Project 2</a> – Short description</li>
-      </ul>
-    </section> -->
-
-    <!-- <section>
+    <section>
       <h2>Education</h2>
-      <p>B.Sc. in Computer Science – University Name (2016–2019)</p>
-    </section> -->
-
-    
+      <ul>
+        <li>Stellenbosch University – BEng (Mechatronics) (2017–2023)</li>
+        <li>Bredasdorp High School – Matric certificate (2012–2016), Hostel Prefect</li>
+      </ul>
+    </section>
+  </main>
   </main>
 
   <footer>
@@ -109,15 +116,15 @@
 
       // Add small spacer to prevent header clipping
       const spacer = document.createElement("div");
-      spacer.style.height = "0.2in";
+      spacer.style.height = "1in";
       pdfContainer.appendChild(spacer);
 
       pdfContainer.appendChild(header.cloneNode(true));
       pdfContainer.appendChild(main.cloneNode(true));
-      pdfContainer.appendChild(footer.cloneNode(true));
+      // pdfContainer.appendChild(footer.cloneNode(true));
 
       html2pdf().from(pdfContainer).set({
-        margin: [0.3, 0.5, 0.5, 0.5], // top, left, bottom, right in inches
+        margin: [0.1, 0.1, 0.1, 0.1], // top, left, bottom, right in inches
         filename: "Dirk Uys CV 2025.pdf",
         image: { type: "jpeg", quality: 0.98 },
         html2canvas: { scale: 2, logging: false, scrollY: -window.scrollY },
@@ -126,4 +133,5 @@
     });
   </script>
 </body>
+
 </html>
